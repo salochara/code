@@ -1,0 +1,123 @@
+// Este archivo scss se compila y se vuelve un css
+// Tiene mas funcionalidad escribir en un scss. 
+// Es un css "avanzado"
+$color: black;
+
+body{
+    color: $color;
+}
+
+.table{
+    color: $color;
+}
+
+nav{
+	ul{
+		margin: 10px;
+		padding: 10px;
+	}
+	li{
+		display: inline-block; // para ver horizontal 
+	}
+	a{
+		display: inline-block;
+		text-decoration: none;
+		color: $color;
+	}
+}
+
+// Se pueden hacer for!!
+// Ver en el .css para ver como deja los h's
+@for $valor from 1 through 6{
+	h#{$valor}{
+		font-size: 24px - 3 * $valor;
+	}
+}
+// Útil 
+@each $animal in leon,perro,gato,elefante{
+	.#{$animal}-foto{
+		padding: 10px;
+	}
+}
+
+// Un mixin es una función (declarativa) !
+@mixin borde($tamano){
+	border-width: $tamano;
+}
+
+// Utilización del mixin. Borde es el nombre de la función, que acepta un parametro.
+.img{
+	@include borde(10px);
+}
+
+.img-2{
+	@include borde(20px); 
+}
+
+// Esta si es una función. Aquí si se pueden hacer operaciones!
+
+@function pow($base,$exp){
+	$resultado: 1;
+	@for $_ from 1 through $exp{
+		$resultado: $resultado * $base;
+	}
+	@return $resultado;
+}
+// Utilización de la función pow
+.clase_funcion{
+	margin: pow(2,5) * 1px;
+}
+// Otra función... esto podría ser un mixin.
+@function f2($color){
+	@return $color;
+}
+
+.clase_f2{
+	color: f2(red);
+}
+
+// Interpolación! (Como en Ruby. Sass está escrito en Ruby)
+
+$interpolation : 'alumnos';
+
+.#{$interpolation}_sm{
+	color: beige;
+}
+
+.#{$interpolation}_md{
+	color: beige;
+}
+
+
+// Parent selector 
+button{
+	color:black;
+	&:hover{ // &(el ampersand) va al parent. O sea, button:hover
+		color: red;
+	}
+}
+
+// Para el media query
+@media(min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),(min-width: 768px) and (min-resolution:192dpi)
+{
+	body
+	{
+		@include borde(20px);
+		color: gray;
+	}
+}
+
+// Para mixin
+$desktop-width : 1024px;
+@mixin desktop{
+	@media (min-width: #{$desktop-width}){
+		@content; // aquí se copia todo lo que escribes en el @include desktop
+	}
+}
+// Todo lo que se escriba en @include desktop, se copia a @content... bonito en mixin!
+@include desktop{
+	#logo{
+		background-color: yellow;
+	}
+}
+

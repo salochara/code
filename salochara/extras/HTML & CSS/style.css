@@ -1,0 +1,50 @@
+/* BASIC CSS Syntax
+selector {
+  property: value;
+}
+*/
+
+/* Naming convention for CSS classes
+.component-shape
+*/
+
+/* CSS Units
+px = pixels relative to the parent %
+vh,vw = relative to the viewport 
+em = realtive to the font size
+*/
+
+/*<!--  The p element if the "banner" id is blue  -->*/
+#banner p {
+  color: red;
+}
+
+/* The a children of class container only*/
+.container > a{
+    color: red
+}
+
+/* Standard CSS selectors*/
+/* HTML Tags*/
+h1 { 
+}
+/* CSS Classes*/
+.container {   
+}
+/* CSS id's*/
+#banner {
+}
+
+/* For understanding Box Models */
+.alumni-div {
+    width: 280px;
+    padding: 4px;
+    border: 10px solid gray;
+    margin: 0; 
+}
+
+/* Set a background color to the whole page */
+body {
+    background-color:white;
+}
+

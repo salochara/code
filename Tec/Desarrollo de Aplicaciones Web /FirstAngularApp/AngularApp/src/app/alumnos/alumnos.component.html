@@ -1,0 +1,8 @@
+<h3>
+  Alumnos
+</h3>
+
+<div *ngFor="let al of alumnos">
+<!--  Se puede usar data porque estoy usando el label alumno... y el componente alumno tiene el @Input() data; -->
+  <alumno [data]="al"></alumno>
+</div>

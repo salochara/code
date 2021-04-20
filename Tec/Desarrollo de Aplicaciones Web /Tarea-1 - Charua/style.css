@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Lobster|Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus,
+*:focus {
+  outline: none !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100vw;
+}
+@media only screen and (max-width: 1000px) {
+  body {
+    font-size: 50%;
+  }
+}
+
+a {
+  text-decoration-line: none;
+  color: inherit;
+}
+
+p {
+  color: #252631;
+  font-family: Lato;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+h2 {
+  color: #1B1E24;
+  font-family: Lato;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+h3 {
+  color: #1B1E24;
+  font-family: Lato;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+section {
+  min-height: 100vh;
+}
+
+.mar-b-3 {
+  margin-bottom: 3rem !important;
+}
+
+.mar-b-2 {
+  margin-bottom: 2rem !important;
+}
+
+.mar-b-1 {
+  margin-bottom: 1rem !important;
+}
+
+.mar-tb-3 {
+  margin: 3rem 0 !important;
+}
+
+.mar-r-1 {
+  margin-right: 1rem !important;
+}
+
+.mar-l-1 {
+  margin-left: 1rem !important;
+}
+
+.mar-t-2 {
+  margin-top: 2rem !important;
+}
+
+.mar-t-3 {
+  margin-top: 3rem !important;
+}
+
+.mar-t-6 {
+  margin-top: 6rem !important;
+}
+
+.mar-0 {
+  margin: 0 !important;
+}
+
+.pad-5 {
+  padding: 5rem;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.h-inherit {
+  height: inherit !important;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-inverse {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-grow {
+  flex-grow: 9;
+}
+
+.space-between {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.f-center {
+  align-items: center;
+}
+
+.f-nowrap {
+  flex-wrap: nowrap !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .flex-inverse-mobile {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .flex-column-reverse-mobile {
+    flex-direction: column-reverse;
+  }
+}
+
+.f-50 {
+  flex: 0 1 50%;
+}
+
+.f-100 {
+  flex: 0 1 100%;
+}
+
+.f-80 {
+  flex: 0 1 80%;
+}
+
+.f-75 {
+  flex: 0 1 75%;
+}
+
+.f-66 {
+  flex: 0 1 66.6%;
+}
+
+.f-60 {
+  flex: 0 1 60%;
+}
+
+.f-40 {
+  flex: 0 1 40%;
+}
+
+.f-33 {
+  flex: 0 1 33.3%;
+}
+
+.f-25 {
+  flex: 0 1 25%;
+}
+
+.f-20 {
+  flex: 0 1 20%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .fm-100 {
+    flex: 0 0 100% !important;
+  }
+}
+.landing {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("images/home.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.landing_title {
+  font-family: Lobster;
+  color: #FFFFFF;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+.landing_text {
+  font-family: Lato;
+  color: #FFFFFF;
+  font-size: 3rem;
+  margin: 0 20vw;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+.products_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.products_img-container {
+  margin: 5rem;
+  height: 50vh;
+}
+.products_title {
+  margin: 2rem 5rem;
+  font-family: Lato;
+  font-size: 2rem;
+}
+.products_text {
+  margin: 2rem 5rem;
+  font-family: Montserrat;
+  font-size: 1.6rem;
+}
+
+.lights {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ebebeb;
+  padding-top: 10rem;
+}
+.lights_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.lights_img-container {
+  margin: 5rem;
+  height: 60vh;
+}
+.lights_title {
+  margin: 5rem 2rem 1rem 2rem;
+  font-family: Lobster;
+  font-size: 2.4rem;
+  color: #000000;
+}
+.lights_sub-title {
+  margin: 0 2rem;
+  font-family: Lobster;
+  font-size: 1.6rem;
+  color: #000000;
+  font-weight: 100;
+}
+.lights_info {
+  margin: 6rem 4rem;
+  width: 70%;
+}
+.lights_info-title {
+  font-family: Lobster;
+  font-size: 1.6rem;
+  color: #000000;
+  font-weight: 100;
+}
+.lights_info-text {
+  font-family: Lato;
+  font-size: 1.6rem;
+}
+
+/*# sourceMappingURL=style.css.map */

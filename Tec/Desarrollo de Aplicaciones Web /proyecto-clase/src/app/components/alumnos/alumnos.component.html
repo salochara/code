@@ -1,0 +1,14 @@
+<table class="table">
+			  <thead>
+			    <tr>
+			      <th >{{ 'alumnosComponent.matricula' | translate }}</th>
+			      <th >{{ 'alumnosComponent.nombre' | translate }}</th>
+			      <th >{{ 'alumnosComponent.paterno' | translate }}</th>
+			      <th >{{ 'alumnosComponent.materno' | translate }}</th>
+			    </tr>
+			  </thead>
+		  	<tbody>
+				<tr *ngFor="let alumno of alumnos" alumno-app [alumno]="alumno" ></tr>
+				
+			</tbody>
+</table>

@@ -1,0 +1,78 @@
+body {
+  color: black; }
+
+.table {
+  color: black; }
+
+nav ul {
+  margin: 10px;
+  padding: 10px; }
+nav li {
+  display: inline-block; }
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: black; }
+
+h1 {
+  font-size: 21px; }
+
+h2 {
+  font-size: 18px; }
+
+h3 {
+  font-size: 15px; }
+
+h4 {
+  font-size: 12px; }
+
+h5 {
+  font-size: 9px; }
+
+h6 {
+  font-size: 6px; }
+
+.leon-foto {
+  padding: 10px; }
+
+.perro-foto {
+  padding: 10px; }
+
+.gato-foto {
+  padding: 10px; }
+
+.elefante-foto {
+  padding: 10px; }
+
+.img {
+  border-width: 10px; }
+
+.img-2 {
+  border-width: 20px; }
+
+.clase_funcion {
+  margin: 32px; }
+
+.clase_f2 {
+  color: red; }
+
+.alumnos_sm {
+  color: beige; }
+
+.alumnos_md {
+  color: beige; }
+
+button {
+  color: black; }
+  button:hover {
+    color: red; }
+
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi) {
+  body {
+    border-width: 20px;
+    color: gray; } }
+@media (min-width: 1024px) {
+  #logo {
+    background-color: yellow; } }
+
+/*# sourceMappingURL=style.css.map */

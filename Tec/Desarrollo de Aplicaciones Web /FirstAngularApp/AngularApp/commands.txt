@@ -1,0 +1,45 @@
+//Para empezar un proyecto con angular
+
+// Tener el cli de angular instalado
+sudo npm install -g @angular/cli
+ng --version
+
+// Nueva aplicación
+ ng new AngularApp --style=scss 
+
+// Para compilar y abrir browser en el puerto correspondiente 
+ng serve --open
+---> Ya esta corriendo !
+
+// Para incluir bootstrap en el proyecto
+npm install bootstrap --save
+
+// Agregar bootstrap en angular.json
+"styles": [
+              "./node_modules/bootstrap/scss/bootstrap.scss",
+              "src/styles.scss"
+            ],
+
+---> Y ya hay bootstrap en el proyecto!
+
+// Para generar componentes
+ng g c titulo
+ng g c titulo2
+
+// En el app.component.html, para que renderee el tutlo component
+<titulo>
+</titulo>
+
+// Para generar servicios
+mkdir src/services
+ng g s services/alumnos
+
+// genero un componente que utilize el servicio
+ng g c alumnos
+// y en alumno.component.ts, declaro en providers que voy a usar ese servicio
+@Component({
+  selector: 'app-alumnos',
+  templateUrl: './alumnos.component.html',
+  styleUrls: ['./alumnos.component.scss'],
+  providers: [AlumnosService] // <<-----esto
+})

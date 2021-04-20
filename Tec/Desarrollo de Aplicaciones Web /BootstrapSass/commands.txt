@@ -1,0 +1,34 @@
+Extender Bootstrap con SaSS usando npm
+
+npm init -y
+npm install webpack --save-dev
+// Agregar bootsrap con npm
+npm install bootstrap --save
+// Jquery porque lo usa bootsrap
+npm install jquery --save
+// Todas las dependencias de Sass para que cargue Bootstrap. Para extender Bootsrap
+npm install autoprefixer css-loader node-sass postcss-loader sass-loader style-loader --save-dev
+// Hacer el webpack file con el código que esta ahí
+touch webpack.config.js
+// Esquema de directorios
+mkdir /src/scss/
+mkdir /dist
+touch /dist/index.html
+touch /src/app.js
+touch /src/scss/app.scss
+
+// en app.js
+import './scss/app.scss'
+
+// en app.scss
+@import "~/bootstrap/scss/bootstrap";
+
+// en package.json, para que webpack compile el webpack.config.js
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+npm run build
+//en index.html
+<script src="bundle.js"></script>
